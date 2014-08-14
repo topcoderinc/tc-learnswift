@@ -9,6 +9,7 @@ var MongoStore = require('connect-mongo')({ session: session });
 var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
+var problems = require('./routes/problems');
 
 var secrets = require('./config/secrets');
 
@@ -42,6 +43,7 @@ app.use(session({
 }));
 
 app.use('/', routes);
+app.use('/problems', problems);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
