@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>learn2swift</title>
+    <title>No Handle &laquo;  Get Started With Swift</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+  	<p><img src="http://tclearnswift.wpengine.com/wp-content/themes/Mobera/images/logo2.png"></p>
     <p>No topcoder handle passed.</p>
   </body>
 </html>
