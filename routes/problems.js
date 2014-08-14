@@ -19,7 +19,7 @@ var getProblem = function(user) {
 /* GET the probelm */
 router.get('/', function(req, res) {
 
-  if (typeof req.query.handle === 'undefined') {
+  if (typeof req.query.handle === 'undefined' || req.query.handle === '') {
     res.render('nohandle');
   } else {
 
