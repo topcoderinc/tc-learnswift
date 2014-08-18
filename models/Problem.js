@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var problemSchema = new mongoose.Schema({
-  instructions: String
+  file: String
 
 });
 

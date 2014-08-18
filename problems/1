@@ -1,0 +1,110 @@
+<p>We suggest you see these Swift resources before getting started:</p>
+<p><a href="https://developer.apple.com/videos/wwdc/2014/?id=402" target="_blank">Watch the Introduction to Swift video</a><br />
+<a href="https://developer.apple.com/videos/wwdc/2014/?id=408" target="_blank">Watch the Swift Playgrounds</a><br />
+<a href="https://developer.apple.com/videos/wwdc/2014/?id=403" target="_blank">Watch the intermediate Swift video</a><br />
+<a href="https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11" target="_blank">Download book Swift Programming Language Book</a></p>
+<p>The requirements for this challenge are as follows. We are trying to cover as many Swift concepts as possible in this Playground with different use cases. Please annotate each requirement in your code so it is easy for us to find. See our http://swift.topcoder.com/resources page for help. Upload your Playground file as your challenge submission.</p>
+<p>To get started, copy everything starting at &#8220;import Foundation&#8221; into your Playground and get coding.</p>
+<hr />
+<p>import Foundation</p>
+<p>// Challenge 21 &#8211; Super-Duper Shopping Cart (Xcode6-Beta5)</p>
+<p>/**<br />
+R1 &#8211; Create a constant array of string literals called “types” with these<br />
+values: book, CD, software<br />
+**/<br />
+// implement code for R1 below</p>
+<p>&nbsp;</p>
+<p>/**</p>
+<p>R2 &#8211; Create a &#8220;Customer&#8221; struct with a &#8220;name&#8221; and &#8220;email&#8221; property<br />
+**/<br />
+// implement code for R2 below</p>
+<p>&nbsp;</p>
+<p>/**</p>
+<p>R3 &#8211; Create a &#8220;randomCustomer&#8221; function that returns a tuple. Add 3</p>
+<p>Customer structs to a dictionary using the customer&#8217;s name as the key.<br />
+This function returns a randomly selected name and email of a Customer<br />
+from the dictionary. (Hint: you can use arc4random_uniform to<br />
+randomly select a value.)<br />
+**/<br />
+// implement code for R3 below</p>
+<p>&nbsp;</p>
+<p>/**</p>
+<p>R4 &#8211; Create a &#8220;Product&#8221; class with the following properties:<br />
+1. id &#8211; Int<br />
+2. name &#8211; String<br />
+3. type &#8211; Constant, randomly selected value from &#8220;types&#8221; array<br />
+4. price &#8211; Double<br />
+5. discount &#8211; Double<br />
+6. saleStatus &#8211; String</p>
+<p>Create an initializer that set&#8217;s the name, price and discount. The<br />
+discount should be set to 0 if discount is not passed. Set the<br />
+id to a random number between 1 and 10,000.</p>
+<p>Create a getter for &#8220;saleStatus&#8221; that returns the String<br />
+&#8220;Sorry. This product is not on sale.&#8221; if dicsount is 0. Else<br />
+return the interpolated string &#8220;This product is on sale. It was<br />
+[display original price] but with a discount you only pay<br />
+[display sale price].&#8221;<br />
+**/<br />
+// implement code for R4 below</p>
+<p>&nbsp;</p>
+<p>/**</p>
+<p>R5 &#8211; Create an array called &#8220;products&#8221; with 5 product objects. Their names are<br />
+irrelevant but chose different prices. Set the discounts to 0, 0.1, 0.2, 0.3<br />
+and 0.4 respectively.</p>
+<p>After adding the items to the array, iterate the collection and println the<br />
+&#8220;saleStatus&#8221; for each item.<br />
+**/<br />
+// implement code for R5 below</p>
+<p>&nbsp;</p>
+<p>/**</p>
+<p>R6 &#8211; Write a simple &#8220;Cart&#8221; class using Generics with the following properties:<br />
+1. customerName &#8211; String<br />
+2. customerEmail &#8211; String<br />
+3. items &#8211; any array of any type T<br />
+4. itemCount &#8211; Int, getter that returns the count of items in &#8220;items&#8221;.<br />
+5. promoCode &#8211; Optional String set to nil</p>
+<p>Create an initializer that set the customerName and customerEmail.</p>
+<p>Implement the following functions:</p>
+<p>1. Create an &#8220;add&#8221; method that appends any type to the &#8220;items&#8221; array.<br />
+2. Create a &#8220;clear&#8221; method that removes all items from the &#8220;items&#8221; array.<br />
+3. Create a &#8220;remove&#8221; method that removes an item from the &#8220;items&#8221; array<br />
+based upon its position in the array.<br />
+4. Create a &#8220;getPromoCodeDisplay&#8221; method that returns the String &#8220;Your<br />
+promo code is [display promoCode].&#8221; if promoCode is not nil. Otherwise,<br />
+return the String &#8220;You do not have a promo code.&#8221;.<br />
+5. Create a &#8220;getCartStatus&#8221; method that returns the String &#8220;You have no<br />
+items in your cart.&#8221; if the number of items in the &#8220;items&#8221; array is 0.<br />
+Return the String &#8220;You have [display number of items] items in your<br />
+cart.&#8221; if the number of items in the &#8220;items&#8221; array is 1, 2 or 3.<br />
+For 4+ items in the &#8220;items&#8221; array, return the String &#8220;You are an<br />
+awesome customer!!&#8221;<br />
+**/<br />
+// implement code for R6 below</p>
+<p>&nbsp;</p>
+<p>/**</p>
+<p>R7 &#8211; Create a &#8220;customer&#8221; object by calling the &#8220;randomCustomer&#8221; function.<br />
+Create a new &#8220;cart&#8221; object for type Product with the newly created<br />
+&#8220;customer&#8221; object&#8217;s name and email. Printlnt customer&#8217;s name. Println the<br />
+itemCount (should be 0). Println the getCartStatus which should display<br />
+&#8220;You have no items in your cart.&#8221;<br />
+**/<br />
+// implement code for R7 below</p>
+<p>&nbsp;</p>
+<p>/**</p>
+<p>R8 &#8211; iterate the &#8220;products&#8221; array and add all items from the &#8220;products&#8221;<br />
+array to the cart except for element 3. Println the itemCount (should be 4),<br />
+println getStatus() (should display &#8220;You are an awesome customer!!&#8221;). Assign<br />
+the customer a promo code. First, println getPromoCodeDisplay (should<br />
+display &#8220;You do not have a promo code.&#8221;), then set the promoCode to &#8220;1234&#8243;,<br />
+then println the getPromoCodeDisplay again (should display &#8220;Your promo code<br />
+is 1234.&#8221;).<br />
+**/<br />
+// implement code for R8 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R9 &#8211; Remove the first item from the cart, then println the itemCount (should<br />
+be 3) and println the getCartStatus which should display &#8220;You have 3 items<br />
+in your cart.&#8221;<br />
+**/<br />
+// implement code for R9 below</p>
+<p>&nbsp;</p>

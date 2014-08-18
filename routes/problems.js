@@ -3,6 +3,8 @@ var router = express.Router();
 var Q = require("q");
 var User = require('../models/User');
 var Problem = require('../models/Problem');
+var fs = require('fs');
+var appRoot = require('app-root-path');
 
 var getProblem = function(user) {
   var deferred = Q.defer();
@@ -10,7 +12,10 @@ var getProblem = function(user) {
   Problem.count(function(err, ct) {
     var r = Math.floor(Math.random() * ct);
     Problem.find().limit(1).skip(r).exec(function(err, problem) {
-      deferred.resolve(problem[0]);
+      fs.readFile(appRoot.path + '/problems/' + problem[0].file, 'utf8', function (err,data) {
+        if (err) { deferred.reject(err); }
+        if (!err) { deferred.resolve({file: problem[0].file, instructions: data}); }
+      });
     });
   });
   return deferred.promise;
@@ -29,12 +34,14 @@ router.get('/', function(req, res) {
 
     User.findOne({ handle: req.query.handle }, function(err, existingUser) {
       if (existingUser) {
-        res.render('index', { instructions: existingUser.problems[0].instructions });
+        fs.readFile(appRoot.path + '/problems/' + existingUser.problems[0], 'utf8', function (err, instructions) {
+          res.render('index', { instructions: instructions });
+        }); 
       } else {
 
         getProblem(new User())
           .then(function(problem) {
-            user.problems.push(problem);
+            user.problems.push(problem.file);
             user.save(function(err) {
               res.render('index', { instructions: problem.instructions });
             });

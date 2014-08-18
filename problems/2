@@ -1,0 +1,75 @@
+<p>We suggest you see these Swift resources before getting started:</p>
+<p><a href="https://developer.apple.com/videos/wwdc/2014/?id=402" target="_blank">Watch the Introduction to Swift video</a><br />
+<a href="https://developer.apple.com/videos/wwdc/2014/?id=408" target="_blank">Watch the Swift Playgrounds</a><br />
+<a href="https://developer.apple.com/videos/wwdc/2014/?id=403" target="_blank">Watch the intermediate Swift video</a><br />
+<a href="https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11" target="_blank">Download book Swift Programming Language Book</a></p>
+<p>The requirements for this challenge are as follows. We are trying to cover as many Swift concepts as possible in this Playground with different use cases. Please annotate each requirement in your code so it is easy for us to find. See our http://swift.topcoder.com/resources page for help. Upload your Playground file as your challenge submission.</p>
+<p>To get started, copy everything starting at &#8220;import Foundation&#8221; into your Playground and get coding.</p>
+<hr />
+<p>import Foundation</p>
+<p>// Challenge 10 &#8211; Bloginator (Xcode6-Beta5)</p>
+<p>/**<br />
+R1 &#8211; Create a constant array of String literals called “types” with the<br />
+values: technology, memes, cat videos<br />
+**/<br />
+// implement code for R1 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R2 &#8211; Create a BlogPost class with the following properties:</p>
+<p>1. type &#8211; String, constant. A random value from the types<br />
+array. (Hint: you can use arc4random_uniform to randomly select a value.)<br />
+2. views &#8211; Optional Int. Set to nil.<br />
+3. Author &#8211; String<br />
+4. email &#8211; String<br />
+5. order &#8211; Int. Set to zero.</p>
+<p>Create an initializer to set the author’s name and email. Create a “teaser”<br />
+method that returns a String with the author’s name and number of views:<br />
+“Mike Smith has 5 views for this blog post”. If views are nil,<br />
+return &#8220;No one has read your blog post yet. Pity.&#8221;.<br />
+**/<br />
+// implement code for R2 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R3 &#8211; Create a “randomAuthor” function that returns a tuple. Then create<br />
+an “Author” struct with a “name” and “email” property. Add 5 Author structs<br />
+to a dictionary using the author’s name as the key. This function returns<br />
+a randomly selected name and email of an Author from the dictionary.<br />
+**/<br />
+// implement code for R3 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R4 &#8211; Create an array of 10 blog posts with a for loop. Set the “author”<br />
+property to the value returned from &#8220;randomAuthor&#8221; function and set<br />
+the “order” property to the value of the index of the for loop used to<br />
+populate this array.<br />
+**/<br />
+// implement code for R4 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R5 &#8211; Create a “randomViews” function that accepts the “type” of blog post<br />
+for an input. Create an array literal of Ints (these are the possible view<br />
+counts) with the values: 10, 20, 30, 40, 50. Select a random value from<br />
+this possible view count array and create a switch that returns nil if<br />
+the views are 10, 0 if the views are either 20 or 30, else return the randomly<br />
+selected number of views. If the “type” passed to the function is<br />
+“cat videos” always return nil.<br />
+**/<br />
+// implement code for R5 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R6 &#8211; Iterate the array of blog posts, generate a value from &#8220;randomViews&#8221; function<br />
+for each one and set it to the blog post “views” property. Then println the<br />
+value of each post.teaser().<br />
+**/<br />
+// implement code for R6 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R7 &#8211; Write a simple stack using a struct with Generics<br />
+that has three methods. It should push and pop BlogPosts and also<br />
+returns the current count of BlogPosts. Iterate the array of blog posts<br />
+and push each one onto the “blogs” stack. Println the count of items in<br />
+the stack. Use a for loop to iterate the “blogs” stack, pop the top one<br />
+off and println the blog’s teaser. Println the count of items in the stack.<br />
+**/<br />
+// implement code for R7 below</p>
+<p>&nbsp;</p>
