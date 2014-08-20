@@ -19,7 +19,7 @@ R2 &#8211; Create a BlogPost class with the following properties:</p>
 <p>1. type &#8211; String, constant. A random value from the types<br />
 array. (Hint: you can use arc4random_uniform to randomly select a value.)<br />
 2. views &#8211; Optional Int. Set to nil.<br />
-3. Author &#8211; String<br />
+3. author &#8211; String<br />
 4. email &#8211; String<br />
 5. order &#8211; Int. Set to zero.</p>
 <p>Create an initializer to set the author’s name and email. Create a “teaser”<br />
