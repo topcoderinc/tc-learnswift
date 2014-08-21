@@ -1,0 +1,123 @@
+<p>We suggest you see these Swift resources first:</p>
+<p><a href="https://developer.apple.com/videos/wwdc/2014/?id=402" target="_blank">Watch the Introduction to Swift video</a><br />
+<a href="https://developer.apple.com/videos/wwdc/2014/?id=408" target="_blank">Watch the Swift Playgrounds</a><br />
+<a href="https://developer.apple.com/videos/wwdc/2014/?id=403" target="_blank">Watch the intermediate Swift video</a><br />
+<a href="https://itunes.apple.com/us/book/swift-programming-language/id881256329?mt=11" target="_blank">Download book Swift Programming Language Book</a></p>
+<p><strong>Definitely read <a href="http://www.codingexplorer.com/generic-functions-in-swift/" target="_blank">this article</a> on Generics and Protocols</strong></p>
+<p>The requirements for this challenge are as follows. We are trying to cover as many Swift concepts as possible in this Playground with different use cases. Please annotate each requirement in your code so it is easy for us to find. See our <a href="http://swift.topcoder.com/resources" target="_blank">http://swift.topcoder.com/resources</a> page for help. Upload your Playground file as your challenge submission.</p>
+<p>To get started, copy everything starting at &#8220;import Foundation&#8221; into your Playground and get coding.</p>
+<hr />
+<p>import Foundation</p>
+<p>// Challenge 32 &#8211; Deathmatch: Devs vs. Designers</p>
+<p>/**<br />
+R1 &#8211; Create a constant array of string literals called “languages” with these<br />
+values: Swift, Java, JavaScript, Ruby<br />
+**/<br />
+// implement code for R1 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R2 &#8211; Create a &#8220;randomMember&#8221; function that returns a tuple. Inside the<br />
+function create a &#8220;Member&#8221; struct with &#8220;handle&#8221; (String) and &#8220;wins&#8221; (Int)<br />
+properties. Add 3 Member structs to a dictionary using the handle as the key.<br />
+This function returns a randomly selected handle and wins of a Member<br />
+from the dictionary. (Hint: you can use arc4random_uniform to<br />
+randomly select a value.)<br />
+**/<br />
+// implement code for R2 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R3 &#8211; Create a &#8220;Member&#8221; protocol with a &#8220;handle&#8221; (String) and &#8220;wins&#8221; (Int) property.<br />
+Create both getters and setters for each.<br />
+**/<br />
+// implement code for R3 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R4 &#8211; Create a &#8220;Designer&#8221; class using the &#8220;Member&#8221; protocol and Swift&#8217;s built-in<br />
+&#8220;Comparable&#8221; protocol. The class will have the following properties:<br />
+1. handle &#8211; String<br />
+2. wins &#8211; Int<br />
+3. favoriteColor &#8211; Optional String set to nil</p>
+<p>Create an initializer that sets handle and wins.</p>
+<p>Create a &#8220;favoriteColorDisplay&#8221; function that returns the String<br />
+&#8220;[display handle]&#8216;s favorite color is [display favorite color].&#8221;<br />
+if favoriteColor is not nil. Otherwise, return the String &#8220;No<br />
+favorite color set for [display handle].&#8221;.</p>
+<p>Create functions for &lt; and == to satisify the Comparable protocol using &#8220;wins&#8221;.<br />
+**/<br />
+// implement code for R4 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R5 &#8211; Create a &#8220;Developer&#8221; class using the &#8220;Member&#8221; protocol and Swift&#8217;s built-in<br />
+&#8220;Comparable&#8221; protocol. The class will have the following properties:<br />
+1. handle &#8211; String<br />
+2. wins &#8211; Int<br />
+3. preferredLanguage &#8211; String</p>
+<p>Create an initializer that sets handle, wins and preferredLanguage. If<br />
+preferredLanguage is not passed, it should be set to &#8220;Swift&#8221;.</p>
+<p>Create a &#8220;languageDisplay&#8221; function that returns the String that returns<br />
+the following:<br />
+&#8220;[display handle] loves Swift. Super cool!&#8221; if preferredLauguage is &#8220;Swift&#8221;<br />
+&#8220;[display handle] knows Java. Must be an old-school member.&#8221; if<br />
+preferredLauguage is &#8220;Java&#8221;<br />
+&#8220;[display handle] enjoys writing [display preferredLauguage].&#8221; if<br />
+preferredLauguage neither &#8220;Swift&#8221; nor &#8220;Java&#8221;</p>
+<p>Create functions for &lt; and == to satisify the Comparable protocol using &#8220;wins&#8221;.<br />
+**/<br />
+// implement code for R5 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R6 &#8211; Create a &#8220;designer1&#8243; and &#8220;designer2&#8243; objects (as constants) of<br />
+the Designer class. Pass any &#8220;handle&#8221; and &#8220;wins&#8221; that you would like.<br />
+Println the favoriteColor for designer2. Set favoriteColor to &#8220;red&#8221; for<br />
+designer2. Println the favoriteColor for designer2.<br />
+**/<br />
+// implement code for R6 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R7 &#8211; Create a &#8220;developer1&#8243; object (as constants) of the Developer class.<br />
+Pass in the following values:<br />
+handle &#8211; handle value returned from calling the randomMember function<br />
+wins &#8211; wins value returned from calling the randomMember function<br />
+preferredLanguage &#8211; randomly selected value from &#8220;languages&#8221; array</p>
+<p>Create a &#8220;developer2&#8243; object (as constants) of the Developer class.<br />
+Pass in the following values:<br />
+handle &#8211; handle value returned from calling the randomMember function<br />
+wins &#8211; wins value returned from calling the randomMember function</p>
+<p>Println the languageDisplat() for both developer1 and developer2.<br />
+**/<br />
+// implement code for R7 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R8 &#8211; Create a simple &#8220;winner&#8221; function using Generics that accepts two Member objects<br />
+and determines which one is greater. This uses the &lt; and == functions we wrote<br />
+for both Designer and Develper classes. If the first passed argument is greater than<br />
+or equal to the second argument, return the first argument. Else return the second<br />
+argument.<br />
+**/<br />
+// implement code for R8 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R9 &#8211; Create a &#8220;designWinner&#8221; constant by calling the winner function and passing<br />
+designer1 and designer2. Println the handle of designWinner. Create a<br />
+&#8220;developmentWinner&#8221; constant by calling the winner function and passing<br />
+developer1 and developer2. Println the preferredLanguage of developmentWinner.<br />
+**/<br />
+// implement code for R9 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R10 &#8211; Create a &#8220;Competitors&#8221; class using Generics that accepts any type of &#8220;Member&#8221;<br />
+object (e.g., Designer or Developer). It has a &#8220;members&#8221; property which is<br />
+any array of any type T. Create an &#8220;add&#8221; method that appends any type<br />
+to the &#8220;members&#8221; array.<br />
+**/<br />
+// implement code for R10 below</p>
+<p>&nbsp;</p>
+<p>/**<br />
+R11 &#8211; Create a &#8220;competitors&#8221; object of the Competitors class that uses &#8220;Member&#8221;. Add<br />
+designer1, designer2, developer1 and developer2 to the &#8220;competitors&#8221; object. Then<br />
+interate with a for loop (hint: user &#8216;enumerate(competitors.members)&#8217;) to println<br />
+the current index for the loop and the member handle for each member in the array:<br />
+&#8220;0. jeffdonthemic&#8221;<br />
+**/<br />
+// implement code for R11 below</p>
+<p>&nbsp;</p>
