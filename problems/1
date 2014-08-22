@@ -7,7 +7,7 @@
 <p>To get started, copy everything starting at &#8220;import Foundation&#8221; into your Playground and get coding.</p>
 <hr />
 <p>import Foundation</p>
-<p>// Challenge 21 &#8211; Super-Duper Shopping Cart (Xcode6-Beta5)</p>
+<p>// Challenge 21 &#8211; Super-Duper Shopping Cart (Use Xcode6-Beta6)</p>
 <p>/**<br />
 R1 &#8211; Create a constant array of string literals called “types” with these<br />
 values: book, CD, software<br />

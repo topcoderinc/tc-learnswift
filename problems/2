@@ -7,7 +7,7 @@
 <p>To get started, copy everything starting at &#8220;import Foundation&#8221; into your Playground and get coding.</p>
 <hr />
 <p>import Foundation</p>
-<p>// Challenge 10 &#8211; Bloginator (Xcode6-Beta5)</p>
+<p>// Challenge 10 &#8211; Bloginator (use Xcode6-Beta6)</p>
 <p>/**<br />
 R1 &#8211; Create a constant array of String literals called “types” with the<br />
 values: technology, memes, cat videos<br />
