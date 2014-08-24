@@ -22,7 +22,7 @@ array. (Hint: you can use arc4random_uniform to randomly select a value.)<br />
 3. author &#8211; String<br />
 4. email &#8211; String<br />
 5. order &#8211; Int. Set to zero.</p>
-<p>Create an initializer to set the author’s name and email. Create a “teaser”<br />
+<p>Create an initializer to set the author’s name (the author property) and email property. Create a “teaser”<br />
 method that returns a String with the author’s name and number of views:<br />
 “Mike Smith has 5 views for this blog post”. If views are nil,<br />
 return &#8220;No one has read your blog post yet. Pity.&#8221;.<br />
