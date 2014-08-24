@@ -10,6 +10,7 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var problems = require('./routes/problems');
+var results = require('./routes/results');
 
 var secrets = require('./config/secrets');
 
@@ -20,7 +21,7 @@ var app = express();
  */
 
 mongoose.connect(secrets.db);
-mongoose.connection.on('error', function() {
+mongoose.connection.on('error', function () {
   console.error('MongoDB Connection Error. Make sure MongoDB is running.');
 });
 
@@ -44,6 +45,7 @@ app.use(session({
 
 app.use('/', routes);
 app.use('/problems', problems);
+app.use('/results', results);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
