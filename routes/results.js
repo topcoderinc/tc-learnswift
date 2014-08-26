@@ -36,7 +36,7 @@ router.get('/', function (req, res) {
           if (lb_result.score === 1) {
             res.render('results', { msg: "Results for " + handle + "<br/><br/><img src='http://i.imgur.com/1S1Mvr2.jpg' width='200'>" });
           } else {
-            res.render('results', { msg: "There was a problem evaluating the submission. Please contact jeff@appirio.com and include your handle." });
+            res.render('results', { msg: "There was a problem evaluating your submission. Please contact jeff@appirio.com and include your handle." });
           }
         }
       }
