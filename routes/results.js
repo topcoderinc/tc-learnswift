@@ -34,7 +34,7 @@ router.get('/', function (req, res) {
           });
         } else {
           if (lb_result.score === 1) {
-            res.render('results', { msg: "Topcoder.com results for " + handle + "<br/><br/><img src='http://i.imgur.com/1S1Mvr2.jpg' width='200'>" });
+            res.render('results', { msg: "Topcoder.com results for " + handle + "<br/><br/><img src='http://i.imgur.com/1S1Mvr2.jpg' width='200'><p style='padding-top:25px'>Tweet your results for a chance to win $250! <a href='http://www.topcoder.com/blog/weekly-getswifter-250-twitter-sweepstakes/' target='_blank'>Here's how to do it.</a></p>" });
           } else {
             res.render('results', { msg: "There was a problem evaluating your submission. Please contact jeff@appirio.com and include your handle." });
           }
